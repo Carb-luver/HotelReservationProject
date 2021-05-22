@@ -14,12 +14,12 @@
 	<name>HotelReservationProject</name>
 	<description>RemoteMode Hotel Reservation Project</description>
 	<properties>
+		<title>Hotel Reservation Project</title>
 		<java.version>1.8</java.version>
 	</properties>
 
 
 	<dependencies>
-<<<<<<< Updated upstream
 		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
