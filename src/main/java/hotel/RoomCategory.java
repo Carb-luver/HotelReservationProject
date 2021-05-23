@@ -1,2 +1,6 @@
-package hotel;public enum RoomCategory {
+package hotel;
+
+public enum RoomCategory {
+    LUX,
+    STANDARD
 }

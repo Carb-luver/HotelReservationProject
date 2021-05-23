@@ -1,2 +1,6 @@
-package hotel;public enum UserRole {
+package hotel;
+
+public enum UserRole {
+    GUEST,
+    ADMINISTRATOR
 }

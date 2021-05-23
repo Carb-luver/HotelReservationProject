@@ -1,2 +1,7 @@
-package hotel;public enum RoomStatus {
+package hotel;
+
+public enum RoomStatus {
+    AVAILABLE,
+    BOOKED,
+    BUSY
 }

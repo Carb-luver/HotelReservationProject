@@ -19,135 +19,59 @@
 	</properties>
 
 
-	<dependencies>
-		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+	<dependencies>		
 		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>1.18.20</version>
-			<scope>provided</scope>
-			<systemPath>${basedir}\src\lib\lombok-1.18.20</systemPath>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-autoconfigure</artifactId>
+		    <version>2.4.6</version>
+		</dependency>	
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot</artifactId>
+		    <version>1.2.3.RELEASE</version>
 		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter -->
+		<dependency>
+			<groupId>org.project.lombok</groupId>
+			<artifactId>lombok</artifactId>
+			<systemPath>C:\Users\mnt78\IdeaProjects\HotelReservationProject\HotelReservationProject\src\lib\lombok-1.18.20.jar</systemPath>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
-			<version>2.4.5</version>
-			<systemPath>${basedir}\src\lib\spring-boot-starter-2.4.5</systemPath>
 		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-actuator -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
-			<version>2.4.5</version>
-			<systemPath>${basedir}\src\lib\spring-boot-starter-actuator-2.4.5</systemPath>
 		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-			<version>2.4.5</version>
-			<systemPath>${basedir}\src\lib\spring-boot-starter-web-2.4.5</systemPath>
 		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
-			<version>2.4.5</version>
-			<systemPath>${basedir}\src\lib\spring-boot-starter-data-jpa-2.4.5</systemPath>
 		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
-			<version>2.4.5</version>
-			<scope>test</scope>
-			<systemPath>${basedir}\src\lib\spring-boot-starter-test-2.4.5</systemPath>
 		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/org.hibernate.javax.persistence/hibernate-jpa-2.1-api -->
 		<dependency>
-			<groupId>org.hibernate.javax.persistence</groupId>
+			<groupId>org.hibernate.javax.persistance</groupId>
 			<artifactId>hibernate-jpa-2.1-api</artifactId>
-			<version>1.0.2.Final</version>
-			<systemPath>${basedir}\src\lib\hibernate-jpa-2.1-api-1.0.2.Final</systemPath>
 		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
-			<version>1.4.200</version>
-			<scope>test</scope>
-			<systemPath>${basedir}\src\lib\h2-1.4.200</systemPath>
+			<systemPath>C:\Users\mnt78\IdeaProjects\HotelReservationProject\HotelReservationProject\src\lib\h2-1.4.200.jar</systemPath>
 		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/javax.validation/validation-api -->
 		<dependency>
 			<groupId>javax.validation</groupId>
 			<artifactId>validation-api</artifactId>
-			<version>2.0.1.Final</version>
-			<systemPath>${basedir}\src\lib\validation-api-2.0.1.Final</systemPath>
 		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
-			<version>2.12.3</version>
-			<systemPath>${basedir}\src\lib\jackson-databind-2.12.3</systemPath>
 		</dependency>
-=======
-
-
-	<dependency>
-		<groupId>org.project.lombok</groupId>
-		<artifactId>lombok</artifactId>
-		<systemPath>C:\Users\mnt78\IdeaProjects\HotelReservationProject\HotelReservationProject\src\lib\lombok-1.18.20.jar</systemPath>
-	</dependency>
-	<dependency>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter</artifactId>
-	</dependency>
-	<dependency>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-actuator</artifactId>
-	</dependency>
-	<dependency>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-web</artifactId>
-	</dependency>
-	<dependency>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-data-jpa</artifactId>
-	</dependency>
-	<dependency>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-test</artifactId>
-	</dependency>
-	<dependency>
-		<groupId>org.hibernate.javax.persistance</groupId>
-		<artifactId>hibernate-jpa-2.1-api</artifactId>
-	</dependency>
-	<dependency>
-		<groupId>com.h2database</groupId>
-		<artifactId>h2</artifactId>
-		<systemPath>C:\Users\mnt78\IdeaProjects\HotelReservationProject\HotelReservationProject\src\lib\h2-1.4.200.jar</systemPath>
-	</dependency>
-	<dependency>
-		<groupId>javax.validation</groupId>
-		<artifactId>validation-api</artifactId>
-	</dependency>
-	<dependency>
-		<groupId>com.fasterxml.jackson.core</groupId>
-		<artifactId>jackson-databind</artifactId>
-	</dependency>
->>>>>>> Stashed changes
 	</dependencies>
 
 
@@ -223,6 +147,11 @@
 				<groupId>com.fasterxml.jackson.core</groupId>
 				<artifactId>jackson-databind</artifactId>
 				<version>2.12.3</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-core</artifactId>
+				<version>5.3.7</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
