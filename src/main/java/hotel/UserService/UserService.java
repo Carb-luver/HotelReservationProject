@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import hotel.User;
 import hotel.UserRepository.UserRepository;
+import hotel.dto.CreateUserRequest;
 
 public class UserService {
 	
@@ -14,7 +15,8 @@ public class UserService {
 	
 	userRepository = new UserRepository();
 	
-	public static void createUser(User user){
+	public static void createUser(CreateUserRequest request){
+		User user = new User(request.getPhone(), request.getPassword(), request.getFirstName(), request.getLastName(), request.getRole());
         userRepository.save(user);
 	}
 	

@@ -31,22 +31,14 @@ public class User implements Serializable {
     @Column(name="Role", columnDefinition="VARCHAR", nullable = false)
     private UserRole role;
 
-//    public User(String phone, String password, String firstName, String lastName, UserRole role) {
-//        this.phone = phone;
-//        this.password = password;
-//        this.firstName = firstName;
-//        this.lastName = lastName;
-//        this.role = role;
-//    }
-    
-    public User(CreateUserRequest request) {
-        this.phone = request.getPhone();
-        this.password = request.getPassword();
-        this.firstName = request.getFirstName();
-        this.lastName = request.getLastName();
-        this.role = request.getRole();
+    public User(String phone, String password, String firstName, String lastName, UserRole role) {
+        this.phone = phone;
+        this.password = password;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.role = role;
     }
-
+    
     public long getId() {
         return Id;
     }

@@ -16,39 +16,52 @@ import hotel.*;
 import hotel.UserRepository.UserRepository;
 import hotel.UserService.UserService;
 import hotel.dto.CreateUserRequest;
+import hotel.dto.UpdateUserRequest;
 
 @RestController
-@RequestMapping (value = "/User" , produces = {"application/json"}, consumes = {"application/json"})
 public class UserController {
-
+	
+	@RequestMapping("/user/createUser")
     public long createUser(@JsonProperty @RequestBody CreateUserRequest request){
     	User user = new User(request);
     	UserService.createUser(user);
         return user.getId();
     }
 
+	@RequestMapping("/user/findUserById")
     public User findUserById(@PathVariable long id) {
 		User user = UserService.findUserById(id);
         return user;
     }
-    
+	
+	@RequestMapping("/user/findUserByPhone")
     public User findUserByPhone(@PathVariable String phone){
     	User user = UserService.findUserByPhone(phone);
         return user;
     }
     
-    //@Async
+	@RequestMapping("/user/findAllUsers")
     public List<User> findAllUsers() {
         List<User> userList = UserService.findAll();
         return userList;
     }
     
+	@RequestMapping("/user/changePassword")
     public User changePassword(@PathVariable long id, @RequestParam String password){
-    	
 		User user = UserService.findUserById(id);
 		user.setPassword(password);
 		UserService.createUser(user);
     	return user;
     }
+	
+	User changeUserInfo(@PathVariable long id, @RequestBody UpdateUserRequest request){
+		User user = findUserById(id);
+		user.setFirstName(request.getFirstName());
+		user.setLastName(request.getLastName());
+		user.setPassword(request.getPassword());
+		user.setPhone(request.getPhone());
+		user.setRole(request.getRole());
+		return user;
+	}
     
 }

@@ -9,20 +9,56 @@ public class UpdateUserRequest {
     String lastName;
     UserRole role;
     
-	public UpdateUserRequest(CreateUserRequest request, String phone, String password, String firstName, String lastName, UserRole role) {
+	public UpdateUserRequest(String phone, String password, String firstName, String lastName, UserRole role) {
 		this.phone = phone;
 		this.password = password;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.role = role;
-		
-		request.setPhone(phone);
-		request.setPassword(password); 
-		request.setFirstName(firstName);
-		request.setLastName(lastName);
-		request.setRole(role);	
+	
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public UserRole getRole() {
+		return role;
+	}
+
+	void setRole(UserRole role) {
+		this.role = role;
 	}
     
+	
 	
     
     
