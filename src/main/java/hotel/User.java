@@ -38,8 +38,8 @@ public class User implements Serializable {
         this.lastName = lastName;
         this.role = role;
     }
-    
-    public long getId() {
+
+	public long getId() {
         return Id;
     }
 

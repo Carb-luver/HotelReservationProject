@@ -1,4 +1,4 @@
-package hotel.UserController;
+package hotel.Controller;
 
 import java.util.List;
 
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import hotel.*;
-import hotel.UserRepository.UserRepository;
-import hotel.UserService.UserService;
+import hotel.Repository.UserRepository;
+import hotel.Service.UserService;
 import hotel.dto.CreateUserRequest;
 import hotel.dto.UpdateUserRequest;
 
@@ -23,8 +23,7 @@ public class UserController {
 	
 	@RequestMapping("/user/createUser")
     public long createUser(@JsonProperty @RequestBody CreateUserRequest request){
-    	User user = new User(request);
-    	UserService.createUser(user);
+		User user = UserService.createUser(request);
         return user.getId();
     }
 
@@ -50,7 +49,7 @@ public class UserController {
     public User changePassword(@PathVariable long id, @RequestParam String password){
 		User user = UserService.findUserById(id);
 		user.setPassword(password);
-		UserService.createUser(user);
+		UserService.updateUser(user);
     	return user;
     }
 	
@@ -61,6 +60,7 @@ public class UserController {
 		user.setPassword(request.getPassword());
 		user.setPhone(request.getPhone());
 		user.setRole(request.getRole());
+		UserService.updateUser(user);
 		return user;
 	}
     
