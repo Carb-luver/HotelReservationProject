@@ -22,7 +22,7 @@ public class Room implements Serializable {
     private long guestsNumber;
 
     @Enumerated (EnumType.STRING)
-    @Column(name="Status", columnDefinition="VARCHAR", nullable = false)
+    @Column(name="Category", columnDefinition="VARCHAR", nullable = false)
     private RoomCategory Category;
 
     @Enumerated (EnumType.STRING)
@@ -32,16 +32,20 @@ public class Room implements Serializable {
     @Column(name="Price", columnDefinition="DECIMAL", nullable = false)
     private double price;
 
-    public Room(long roomNumber, long guestsNumber, RoomCategory category, RoomStatus status, double price) {
+    public Room(long roomNumber, long guestsNumber, RoomCategory category, /*RoomStatus status, */double price) {
         this.roomNumber = roomNumber;
         this.guestsNumber = guestsNumber;
         this.Category = category;
-        this.status = status;
+        //this.status = status;
         this.price = price;
     }
 
     public long getId() {
         return Id;
+    }
+    
+    public void setId(long Id) {
+        this.Id = Id;
     }
 
     public long getRoomNumber() {
