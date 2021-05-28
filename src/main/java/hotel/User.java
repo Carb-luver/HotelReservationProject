@@ -2,9 +2,6 @@ package hotel;
 
 import java.io.Serializable;
 import javax.persistence.*;
-import java.util.*;
-import hotel.*;
-import hotel.dto.CreateUserRequest;
 
 @Entity
 @Table(name="users")
@@ -27,8 +24,8 @@ public class User implements Serializable {
     @Column(name="LastName", columnDefinition="VARCHAR", nullable = false)
     private String lastName;
 
-    @Enumerated (EnumType.STRING)
-    @Column(name="Role", columnDefinition="VARCHAR", nullable = false)
+    @Enumerated (EnumType.ORDINAL)
+    @Column(name="Role", columnDefinition="BIGINT", nullable = false)
     private UserRole role;
 
     public User(String phone, String password, String firstName, String lastName, UserRole role) {
@@ -38,8 +35,17 @@ public class User implements Serializable {
         this.lastName = lastName;
         this.role = role;
     }
+<<<<<<< Updated upstream
     
     public long getId() {
+=======
+
+	public User() {
+
+	}
+
+	public long getId() {
+>>>>>>> Stashed changes
         return Id;
     }
 

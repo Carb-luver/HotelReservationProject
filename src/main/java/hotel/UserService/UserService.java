@@ -3,7 +3,12 @@ package hotel.UserService;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+<<<<<<< Updated upstream:src/main/java/hotel/UserService/UserService.java
 
+=======
+import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
+>>>>>>> Stashed changes:src/main/java/hotel/Service/UserService.java
 import hotel.User;
 import hotel.UserRepository.UserRepository;
 import hotel.dto.CreateUserRequest;
@@ -11,7 +16,11 @@ import hotel.dto.CreateUserRequest;
 public class UserService {
 	
 	@Autowired
+<<<<<<< Updated upstream:src/main/java/hotel/UserService/UserService.java
 	private final static UserRepository userRepository;
+=======
+	static UserRepository userRepository;
+>>>>>>> Stashed changes:src/main/java/hotel/Service/UserService.java
 	
 	userRepository = new UserRepository();
 	

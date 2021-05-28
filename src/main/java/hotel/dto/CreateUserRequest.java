@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 import hotel.*;
 import hotel.UserRepository.UserRepository;
 
-@Service
 public class CreateUserRequest {
     String phone;
     String password;

@@ -5,6 +5,7 @@ import hotel.*;
 import java.io.Serializable;
 import javax.persistence.*;
 import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -29,19 +30,22 @@ public class Reservation implements Serializable {
     @Column(name="ReservationStatus", columnDefinition="VARCHAR", nullable = false)
     private ReservationStatus status;
 
-    @Enumerated (EnumType.STRING)
-    @Column(name="StartDate", columnDefinition="VARCHAR", nullable = false)
-    private Timestamp startDate;
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name="StartDate", columnDefinition="TIMESTAMP", nullable = false)
+    private Date startDate;
 
-    public Reservation(long roomId, long userId, double price, ReservationStatus status, Timestamp startDate) {
+    public Reservation(long roomId, long userId, double price, ReservationStatus status, Date startDate) {
         this.roomId = roomId;
         this.userId = userId;
         this.price = price;
         this.status = status;
         this.startDate = startDate;
     }
+    
+    public Reservation() {
+	}
 
-    public long getId() {
+	public long getId() {
         return Id;
     }
 
@@ -78,7 +82,7 @@ public class Reservation implements Serializable {
         this.status = status;
     }
 
-    public Timestamp getStartDate() {
+    public Date getStartDate() {
         return startDate;
     }
 

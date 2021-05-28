@@ -40,7 +40,11 @@ public class Room implements Serializable {
         this.price = price;
     }
 
-    public long getId() {
+    public Room() {
+    	
+	}
+
+	public long getId() {
         return Id;
     }
 
