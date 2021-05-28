@@ -1,14 +1,12 @@
 package hotel.Controller;
 
 import java.util.List;
-
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
 import hotel.Room;
 import hotel.RoomCategory;
 import hotel.RoomStatus;
